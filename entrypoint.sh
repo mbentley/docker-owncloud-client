@@ -15,7 +15,7 @@ fi
 
 if [ -z "${PASSWORD}" ]
 then
-  echo "Missing PASSWORDL"
+  echo "Missing PASSWORD"
   exit 1
 fi
 
@@ -26,5 +26,8 @@ then
   exit 1
 fi
 
+# make options available
+OPTIONS="${OPTIONS:---non-interactive}"
+
 # execute owncloud sync
-exec owncloudcmd -u "${USERNAME}" -p "${PASSWORD}" --non-interactive /data "${OWNCLOUD_URL}"
+exec owncloudcmd -u "${USERNAME}" -p "${PASSWORD}" ${OPTIONS} /data "${OWNCLOUD_URL}"

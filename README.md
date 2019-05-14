@@ -15,6 +15,7 @@ docker run -t --rm \
   -e OWNCLOUD_URL="https://owncloud.example.com" \
   -e USERNAME="username" \
   -e PASSWORD="password" \
+  -e OPTIONS="--non-interactive" \
   -v ${HOME}/ownCloud:/data \
   mbentley/owncloud-client
 ```
