@@ -9,7 +9,7 @@ To pull this image:
 
 Example usage:
 ```
-docker run -it --rm \
+docker run -t --rm \
   --name owncloud-client \
   -u "$(id -u):$(id -g)" \
   -e OWNCLOUD_URL="https://owncloud.example.com" \
